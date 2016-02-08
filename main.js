@@ -1,4 +1,19 @@
 /**
+ * Emoji
+ * 
+ * @class Emoji
+ * @constructor
+ */
+
+var emoji = function (options) {
+    /**
+     * @property orientation
+     * @type String
+     * @required
+     */
+    this.orientation = options.orientation || return 'Not going to fly, emoji.orientation is required.'
+}
+/**
  * Get keyboard input
  *
  * Mozilla says to use KeyboardEvent.key is preferred, but
@@ -28,6 +43,16 @@ var controllers = {
 }
 
 /**
+ * Players are synonymous with the user.
+ * 
+ * @class Player
+ * @constructor
+ */
+var Player = function (options) { // How do I doc the options?
+    this.username = options.username || 'Playa'
+}
+
+/**
  * Animal
  *
  * @class
@@ -40,7 +65,6 @@ function Animal(genes) {
 	this.controls = genes.controls
 	this.player = genes.player
 	this.html = {}
-    this.htmlRef
     this.position = { x: 0, y: 0 }
 	
 	// Set controls
