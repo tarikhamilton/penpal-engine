@@ -449,7 +449,34 @@ body {
   font-weight: bolder;
   font-size: 24px;
   font-family: sans-serif;
-  text-align: center; }
+  text-align: center;
+  opacity: 0.5;
+  width: 2rem;
+  margin: auto; }
+  .player-indicator:before {
+    display: block;
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    right: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: auto;
+    transform: rotate(45deg);
+    overflow: hidden;
+    background-image: linear-gradient(135deg, rgba(255, 0, 0, 0) 48%, red 48.5%);
+    content: '';
+    animation-name: player-indicator-float;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite; }
+
+@keyframes player-indicator-float {
+  0% {
+    bottom: -0.9rem; }
+  50% {
+    bottom: -1.25rem; }
+  100% {
+    bottom: -0.9rem; } }
 
 .player__img {
   width: 100%;
